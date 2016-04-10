@@ -471,11 +471,6 @@ void leerfichero(char* fich){
                     codificacion = "0000_" + regbinary1 + "_" + port + codificacion;
                  }
                  break;
-                 case 18:
-                 {
-                    codificacion = "0000_0000_0000_0000";
-                 }
-                 break;
                  default:
                     //pInst.pop();
                  break;
