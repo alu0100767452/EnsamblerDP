@@ -116,6 +116,7 @@ public:
         inst.push_back(std::tuple<int,std::string>{15,"RA"});    //15
         inst.push_back(std::tuple<int,std::string>{16,"OUT"});   //16
         inst.push_back(std::tuple<int,std::string>{17,"IN"});    //17
+        inst.push_back(std::tuple<int,std::string>{18,"NOP"});   //18
         port.push_back(std::tuple<int,std::string>{1,"PORT1"});
         port.push_back(std::tuple<int,std::string>{2,"PORT2"});
         port.push_back(std::tuple<int,std::string>{3,"PORT3"});
@@ -468,7 +469,7 @@ void leerfichero(char* fich){
                     string port = pInst.front();
                     port = PortToBinary(port);
                     pInst.pop();
-                    codificacion = "0000_" + regbinary1 + "_" + port + codificacion;
+                    codificacion = regbinary1 + "_0000_" + port + codificacion;
                  }
                  break;
                  case 18:
